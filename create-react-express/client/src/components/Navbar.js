@@ -18,4 +18,4 @@ function NavbarHome() {
     );
 }
 
-export default NavbarHome;
+export default NavbarHome
