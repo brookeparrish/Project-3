@@ -1,12 +1,16 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
+
 import Main from "./components/AuthTestOne/Main"
 import Secret from "./components/AuthTestOne/Secret"
 import NotFound from "./components/AuthTestOne/NotFound"
 import Callback from "./components/AuthTestOne/Callback"
 import Auth from "./Auth"
 
+import Navbar from './components/Navbar/Navbar';
+
+// import all pages for routes
 
 import Home from './pages/home/Home';
 import CreateAccount from './pages/createAccount/CreateAccount';
@@ -46,11 +50,28 @@ class App extends Component {
         mainComponent = <NotFound {...this.props} />
     }
     return (
-      <div>
-        <h1>This is the Gathered Here Registry App, {this.props.name}.</h1>
 
-        {mainComponent}
-      </div >
+      <Router>
+        <div>
+
+          {/* Navbar Here (so we can route to other pages) */}
+          <NavbarHome />
+
+          <h1>This is the Gathered Here Registry App, {this.rops.name}.</h1>
+          {mainComponent}
+
+          <Route exact path="/" component={Home}></Route>
+          <Route exact path="/CreateAccount" component={CreateAccount}></Route>
+          <Route exact path="/Find" component={Find}></Route>
+          <Route exact path="/Login" component={Login}></Route>
+          <Route exact path="/Registry" component={Registry}></Route>
+          <Route exact path="/SearchRegistry" component={SearchRegistry}></Route>
+          <Route exact path="/Shop" component={Shop}></Route>
+
+          {/* Footer Here */}
+
+        </div>
+      </Router>
     );
 
   }
