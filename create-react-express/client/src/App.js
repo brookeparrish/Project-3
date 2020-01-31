@@ -6,10 +6,10 @@ import Navbar from './components/Navbar/Navbar';
 // import all pages for routes
 import Home from './pages/home/Home';
 import CreateAccount from './pages/createAccount/CreateAccount';
-import Find from './pages/find/Find';
+import Find from './pages/findOpportunities/Find';
 import Login from './pages/login/Login';
-import Registry from './pages/registry/Registry';
-import SearchRegistry from './pages/searchRegistry/SearchRegistry';
+import Registry from './pages/blog/Blog';
+import SearchRegistry from './pages/resources/Resources';
 import Shop from './pages/shop/Shop';
 import NavbarHome from "./components/Navbar/Navbar";
 
